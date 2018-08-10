@@ -26,12 +26,20 @@ var parent2 = Parents(name: "Father", age: "30")
 var kids = Kids(name: "Child", age: "5")
 var cat = Cat(name: "cat", age: "1")
 
-var array: [Any] = [parent1, parent2, kids, cat]
-for val in array {
-    if let parent = val as? Parents {
-        print(parent)
-    } else if let kid = val as? Kids {
-            print(kid)
+//var array: [Any] = [parent1, parent2, kids, cat]
+//for val in array {
+//    if let parent = val as? Parents {
+//        print(parent)
+//    } else if let kid = val as? Kids {
+//            print(kid)
+//    }
+//
+//}
+
+var array: [OneProtocol] = [parent1, parent2, kids, cat]
+func sortFamily(array: [OneProtocol]) {
+    for value in array {
+        print(value.name)
     }
-    
 }
+sortFamily(array: array)
